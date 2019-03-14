@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BookDetailActivity"
+    android:layout_marginTop="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/detail_scrollview"
+        android:id="@+id/top_RL">
+        <ImageView
+            android:id="@+id/detail_back"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/back"
+            />
+        <TextView
+            android:id="@+id/detail_title"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text=""
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:layout_centerInParent="true"
+            android:gravity="center"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:fillViewport="true"
+        android:id="@+id/detail_scrollview"
+        app:layout_constraintTop_toBottomOf="@id/top_RL"
+        android:scrollbars="vertical">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/detail_topLL"
+        android:orientation="vertical"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:id="@+id/detail_cover" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/detail_bookTitle"
+                android:text=""
+                android:textSize="22sp"
+                app:layout_constraintLeft_toRightOf="@id/detail_cover"
+                app:layout_constraintTop_toTopOf="@id/detail_cover"
+                android:layout_gravity="top"
+                android:layout_margin="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/detail_TV"
+                android:text=""
+                android:textSize="14sp"
+                android:textColor="@color/colorGrey"
+                app:layout_constraintLeft_toRightOf="@id/detail_cover"
+                app:layout_constraintTop_toBottomOf="@id/detail_bookTitle"
+                app:layout_constraintBottom_toTopOf="@+id/detail_update"
+                android:layout_margin="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/detail_update"
+                android:text=""
+                android:textSize="14sp"
+                android:textColor="@color/colorRed"
+                android:layout_weight="1"
+                app:layout_constraintLeft_toRightOf="@id/detail_cover"
+                app:layout_constraintBottom_toBottomOf="@id/detail_cover"
+                android:layout_margin="10dp"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/card_edge"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/detail_follower1"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="人数: "
+                android:textColor="@color/colorGrey"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/detail_follower2"
+                android:text=""
+                android:textSize="16sp"
+                android:textColor="@color/colorBlack"
+                android:layout_toRightOf="@id/detail_follower1"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/detail_retentionRatio1"
+                android:layout_toLeftOf="@+id/detail_retentionRatio2"
+                android:layout_centerVertical="true"
+                android:text="读者留存率: "
+                android:textColor="@color/colorGrey"
+                android:textSize="12sp"
+                android:layout_marginRight="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/detail_retentionRatio2"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text=""
+                android:textSize="16sp"
+                android:textColor="@color/colorBlack"/>
+
+        </RelativeLayout>
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/detail_longIntro"
+            app:layout_constraintTop_toBottomOf="@+id/detail_CV"
+            android:textSize="12sp"
+            android:layout_marginBottom="10dp"
+            android:text=""/>
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/colorGrey"
+        app:layout_constraintTop_toBottomOf="@id/detail_topLL"
+        app:layout_constraintBottom_toTopOf="@+id/detail_midRL"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/detail_midRL"
+        app:layout_constraintTop_toBottomOf="@id/detail_topLL"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/detail_recomTitle"
+            android:text="同类推荐"
+            android:textSize="18sp"
+            android:textColor="@color/colorBlack"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/detail_more"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/detail_recomTitle"
+            android:layout_alignBottom="@id/detail_recomTitle"
+            android:background="@null"
+            android:text="更多"
+            android:textSize="12sp"
+            android:textColor="@color/colorGrey"
+            android:textAlignment="center" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/detail_recomRG"
+            android:layout_below="@+id/detail_recomTitle"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="180dp"
+                android:text=""
+                android:textSize="10sp"
+                android:background="@null"
+                android:layout_weight="1"
+                android:id="@+id/detail_recom1" />
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="180dp"
+                android:text=""
+                android:textSize="10sp"
+                android:background="@null"
+                android:layout_weight="1"
+                android:id="@+id/detail_recom2"
+                android:layout_marginRight="5dp"/>
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="180dp"
+                android:text=""
+                android:textSize="10sp"
+                android:background="@null"
+                android:layout_weight="1"
+                android:id="@+id/detail_recom3" />
+
+        </RadioGroup>
+
+    </RelativeLayout>
+
+    </LinearLayout>
+
+    </ScrollView>
+
+    <RadioGroup
+        android:id="@+id/detail_bottomRG"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <RadioButton
+            android:id="@+id/detail_bottom_add"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="加入书架"
+            android:textSize="16sp"
+            android:textColor="@color/colorRed"
+            android:padding="10dp"
+            android:background="@drawable/buttonstyle"/>
+
+        <RadioButton
+            android:id="@+id/detail_bottom_read"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/buttonstyle"
+            android:button="@null"
+            android:gravity="center"
+            android:text="免费阅读"
+            android:textSize="16sp"
+            android:textColor="@color/colorRed"
+            android:padding="10dp"/>
+
+    </RadioGroup>
+
+</android.support.constraint.ConstraintLayout>

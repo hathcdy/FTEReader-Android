@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/read_page_whole_layout"
+    android:background="@color/PapayaWhip">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/read_page_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:layout_marginBottom="40sp" />
+
+    <!--底部UI-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/activity_read_page_bottom_layout"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10sp"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="10sp">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/activity_read_page_battery_layout"
+            android:layout_centerVertical="true">
+            <ImageView
+                android:layout_width="30sp"
+                android:layout_height="10sp"
+                android:src="@mipmap/battery"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/activity_read_page_battery_percent"
+                android:text="87"
+                android:textSize="7sp"/>
+        </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/activity_read_page_time"
+            android:text="11:15"
+            android:layout_toRightOf="@id/activity_read_page_battery_layout" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/activity_read_page_process"
+            android:text="1/8"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/read_page_progressbar"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+
+    <RadioGroup
+        android:id="@+id/read_page_bottom_rg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:clickable="false"
+        android:visibility="gone">
+        <RadioButton
+            android:id="@+id/read_page_day_and_night_rb"
+            style="@style/BottomRB"
+            android:text="夜间"
+            android:drawableTop="@mipmap/nighttime" />
+        <RadioButton
+            android:id="@+id/read_page_horizontal_and_vertical_rb"
+            style="@style/BottomRB"
+            android:text="横屏"
+            android:drawableTop="@mipmap/horizontal_screen" />
+        <RadioButton
+            android:id="@+id/read_page_setting_rb"
+            style="@style/BottomRB"
+            android:text="设置"
+            android:drawableTop="@mipmap/textsize" />
+        <!--<RadioButton
+            android:id="@+id/read_page_download_rb"
+            style="@style/BottomRB"
+            android:text="下载"
+            android:drawableTop="@mipmap/download"/>-->
+        <RadioButton
+            android:id="@+id/read_page_catalog_rb"
+            style="@style/BottomRB"
+            android:text="目录"
+            android:drawableTop="@mipmap/catalog"/>
+    </RadioGroup>
+</RelativeLayout>

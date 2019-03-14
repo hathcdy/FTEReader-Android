@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.ReadPageFragment"
+    android:id="@+id/fragment_read_page_whole_layout"
+    android:background="@color/nightBackGround">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10sp"
+        android:layout_marginBottom="10sp"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="10sp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fragment_read_page_title"
+            android:text="第一章 沙漠中的彼岸花"
+            android:textSize="12sp"/>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fragment_read_page_title"
+            android:layout_marginTop="10sp"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/fragment_read_page_content"
+                android:text="大漠孤烟直，长河落日圆。\n一望无垠的大漠，空旷而高远，壮阔而雄浑，当红日西坠，地平线尽头一片殷红，磅礴中亦有种苍凉感。\n上古的烽烟早已在岁月中逝去，黄河古道虽然几经变迁，但依旧在。\n楚风一个人在旅行，很疲惫，他躺在黄沙上，看着血色的夕阳，不知道还要多久才能离开这片大漠。\n数日前他毕业了，同时也跟校园中的女神说再见，或许见不到了吧，毕竟他曾被委婉的告知，从此天各一方，该分手了。\n离开学院后，他便出来旅行。\n落日很红，挂在大漠的尽头，在空旷中有一种宁静的美。\n楚风坐起来喝了一些水，感觉精力恢复了不少，他的身体属于修长强健那一类型，体质非常好，疲惫渐消退。\n站起来眺望，他觉得快要离开大漠了，再走一段路程或许就会见到牧民的帐篷，他决定继续前行。\n一路西进，他在大漠中留下一串很长、很远"
+                android:textSize="18sp"
+                android:textColor="@color/bookItemNameColor"
+                android:lineSpacingExtra="5dp"/>
+        </ScrollView>
+
+
+
+
+
+
+    </RelativeLayout>
+
+</FrameLayout>
